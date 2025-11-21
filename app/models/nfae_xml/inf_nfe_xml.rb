@@ -7,17 +7,8 @@ class InfNfeXml
     def initialize(nfae)
         @cUF = "11" 
         @aamm = gerar_aamm 
-        if nfae.ide.CPFUsuario == '04248685205'
-        @cnpjEmitente = "05599253000147" 
-        else
         @cnpjEmitente = nfae.ide.CNPJEmitente
-        end
-        @mod = "55" 
-        if nfae.ide.CPFUsuario == '04248685205'
-        @serie = "898"  
-        else
         @serie = "001"
-        end
         @nNF = gerar_nNF
         @tpEmis = "1"
         @cNF = gerar_cNF
